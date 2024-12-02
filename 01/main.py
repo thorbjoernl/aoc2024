@@ -1,5 +1,5 @@
 import math
-from collections import defaultdict
+from collections import Counter
 
 
 # Helpers
@@ -25,15 +25,7 @@ print(_sum)  # 1873376
 
 
 # Part 2
-def count_occurrences(ls: list[int]) -> dict:
-    tally = defaultdict(lambda: 0)
-    for i in ls:
-        tally[i] += 1
-
-    return tally
-
-
-counts = count_occurrences(B)
+counts = Counter(B)
 
 _similarity = 0
 for a in A:
